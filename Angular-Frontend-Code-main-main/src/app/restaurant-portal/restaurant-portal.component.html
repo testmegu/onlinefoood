@@ -1,0 +1,52 @@
+<head>
+    <style>
+        .btn-group-vertical{
+            font-size: 30px;
+            position: relative;
+            left: 25%;
+            /* background-color: rgb(43, 5, 48); */
+            background-color:  rgba(53, 5, 39, 0.767);
+            /* background-color: #000000; */
+        }
+        .card1{
+            background-image: url(/assets/wall.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .card-subtitle{
+            position: relative;
+            left: 25%;
+            top: 20px;
+            color: rgb(217, 255, 0);
+            font-size: 40px;
+        }
+        .card-title{
+            position: relative;
+            left: 25%;
+            color: rgb(240, 231, 231);
+        }
+        .font{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<div class="card">
+    <div class="card1">
+    <div class="card-title">
+        <h1 class="font">Hi, {{restaurant.firstName}} {{restaurant.lastName}}, welcome to your portal</h1>
+    </div>
+    <div class="card-subtitle">
+        <p>Select an option below</p>
+    </div>
+    <div class="card-body">
+        <div class="btn-group-vertical">
+            <a routerLink="/restaurant/{{restaurantId}}/details">> Personal Information</a>
+            <a routerLink="/restaurant/{{restaurantId}}/transaction">>View and Update Transaction Status</a>
+            <a routerLink="/restaurant/{{restaurantId}}/updatemenu">>Update Menu</a>
+            <a routerLink="/restaurant/{{restaurantId}}/customer-list">>View Customer List</a>
+            <a routerLink="/login">>Log out</a>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,57 @@
+<head>
+    <style>
+        .card{
+            background-image: url(/assets/fork.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .fetch{
+            font: 30px poppins;
+            color: rgb(241, 115, 12);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<div class="card">
+    <div class="card-title">
+        <h4>Personal Details</h4>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Restaurant Id</th>
+                    <td class="fetch">{{restaurantId}}</td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td class="fetch">{{restaurant.firstName}}</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td class="fetch">{{restaurant.lastName}}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td class="fetch">{{restaurant.email}}</td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td class="fetch">{{restaurant.username}}</td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td class="fetch">{{restaurant.password}}</td>
+                </tr>
+                <tr>
+                    <th>Food Specialization</th>
+                    <td class="fetch">{{restaurant.foodSpecialization}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" type="button" (click)="goUpdate()">Edit</button>
+        &nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary" (click)="backToPortal()">Back to Portal</button>
+
+</div>

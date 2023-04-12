@@ -1,0 +1,56 @@
+<head>
+    <style>
+        .card{
+            background-image: url(/assets/fork.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .fetch{
+            font: 30px poppins;
+            color: rgb(241, 115, 12);
+            font-weight: 600;
+        }
+    </style>
+</head><div class="card">
+    <div class="card-title">
+        <h4>Personal Details</h4>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Customer Id</th>
+                    <td class="fetch">{{custId}}</td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td class="fetch">{{customer.firstName}}</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td class="fetch">{{customer.lastName}}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td class="fetch">{{customer.email}}</td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td class="fetch">{{customer.username}}</td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td class="fetch">{{customer.password}}</td>
+                </tr>
+                <tr>
+                    <th>Wallet Balance</th>
+                    <td class="fetch">{{customer.balance}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" type="button" (click)="goUpdate()">Edit</button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-primary" (click)="backToPortal()">Back to Portal</button>
+</div>
+

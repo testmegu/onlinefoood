@@ -1,0 +1,47 @@
+<head>
+    <style>
+        .card{
+            background-image: url(/assets/fork.jpg);
+            background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .form{
+            font: 30px poppins;
+            color: rgb(46, 23, 4);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<div class="card">
+    <div class="card-title">
+        <h4>Customer List</h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Wallet Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  class="form" *ngFor="let customer of customers | async">
+                    <td>{{customer.customerId}}</td>
+                    <td>{{customer.firstName}}</td>
+                    <td>{{customer.lastName}}</td>
+                    <td>{{customer.email}}</td>
+                    <td>{{customer.username}}</td>
+                    <td>{{customer.password}}</td>
+                    <td>{{customer.balance}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" (click)="onClick()">Back to Portal</button>
+    </div>
+</div>
